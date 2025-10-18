@@ -1,3 +1,13 @@
-body {
-  margin: 0;
-}
+@import 'utilities/variables'
+@import 'utilities/mixins'
+
+
+
+
+@import '/src/styles/blocks/main';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/top_bar';
+@import 'blocks/menu';
+@import 'blocks/nav';
+@import '/src/styles/blocks/details';

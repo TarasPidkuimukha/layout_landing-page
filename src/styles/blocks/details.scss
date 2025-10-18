@@ -1,0 +1,105 @@
+.details {
+  &__wrapper{
+    display: grid;
+    row-gap: 40px;
+    margin-bottom: 120px;
+
+    @include onTablet {
+      row-gap: 48px;
+    }
+    @include onDesktop {
+      row-gap: 48px;
+    }
+}
+
+
+
+
+}
+
+.detail {
+  &__photos {
+    @include pageGrid;
+    margin-bottom: 16px;
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__link {
+
+    position: relative;
+
+    &--wide {
+      @include onTablet {
+        grid-column: span 4;
+    }
+      @include onDesktop {
+        grid-column: span 8;
+    }
+    }
+    &--square {
+        height: 0;
+        padding-bottom: 100%; //щоб була квадратна картинка
+      @include onTablet {
+        grid-column: span 2;
+    }
+      @include onDesktop {
+        grid-column: span 4;
+    }
+  }
+
+  }
+
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+}
+
+.explore {
+
+
+  //можливо треба буде додати падінги до всього сайту, щоб кнопка не була за велика
+  flex-shrink: 0;
+  display: flex;
+  width: 278px;
+  height: 56px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  font-weight: 700;
+  line-height: 27px;
+  font-size: 16px;
+  text-decoration: none;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  place-content: center;
+  box-sizing: border-box;
+
+  @include onTablet {
+    width: 392px;
+  }
+  @include onDesktop {
+    width: 324px;
+  }
+  //додати стани :hover та :active, також перевірити як додати відступ внизу
+  // може вгорі, до заголовку contact
+}
+//додати щоб картики збільшувались коли наводиш
+

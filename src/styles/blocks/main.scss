@@ -1,0 +1,22 @@
+.main {
+  background-color: #1D1D1D;
+
+  &__content {
+    display: grid;
+    row-gap: 92px;
+    padding-block: 92px;
+
+
+    @include onTablet {
+      padding-block: 120px;
+      row-gap: 120px;
+    }
+    @include onDesktop {
+      padding-block: 144px; //треба тільки розібратись що з них що
+      row-gap: 144px; // де на дизайні padding-block, а де row-gap
+    }
+  }
+
+
+
+}

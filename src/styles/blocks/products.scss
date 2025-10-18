@@ -1,0 +1,46 @@
+.products {
+
+  @include pageGrid;
+
+
+  &__container {
+    display: grid;
+    row-gap: 48px; //це відстань між ціною та наступним фото у моб версії
+
+
+  }
+
+  &__product {
+    grid-column: 1/-1;
+
+    @include onTablet {
+      grid-column: 2/ -2;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    //чи треба стилізувати те що нижче ?
+    &__title {
+
+    }
+
+    &__description {
+
+    }
+
+    &__price {
+
+    }
+
+  }
+
+}
+
+
+

@@ -1,13 +1,13 @@
-@import 'utilities/variables'
-@import 'utilities/mixins'
+@import '/src/styles/utilities/variables';
+@import '/src/styles/utilities/mixins';
 
 
 
 
 @import '/src/styles/blocks/main';
-@import 'blocks/page';
-@import 'blocks/header';
-@import 'blocks/top_bar';
-@import 'blocks/menu';
-@import 'blocks/nav';
+@import '/src/styles/blocks/page';
+@import '/src/styles/blocks/header';
+@import '/src/styles/blocks/top_bar';
+@import '/src/styles/blocks/menu';
+@import '/src/styles/blocks/nav';
 @import '/src/styles/blocks/details';

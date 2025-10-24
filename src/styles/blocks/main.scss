@@ -17,6 +17,10 @@
     }
   }
 
+  @include contentPaddingInline;
 
 
+}
+.container {
+  @include maxWidth;
 }

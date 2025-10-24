@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -7,16 +7,295 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
     <link
       rel="stylesheet"
-      href="src/styles/main.scss"
+      href="/src/styles/main.scss"
     />
     <script
-      src="src/scripts/main.js"
+      src="scripts/main.js"
       defer
     ></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__body">
+    <!--header-->
+    <header class="header">
+      <div class="container"> <!--для обмежень всієї сторінки-->
+        <div class="header__content"> <!--стилізація начинки хедера-->
+          <div class="top-bar">
+            <a href="#" class="top-bar__logo">
+              <img src="/src/images/icons/MyBiKE_logo_white.png" alt="MyBiKE logo">
+            </a>
+            <div class="top-bar__icons">
+              <a href="tel:+1 234 555-55-55" class="icon icon--phone"></a>
+              <a href="#menu" class="icon icon--menu"
+              ></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <h1 class="header__title">
+              Take the Streets
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- треба ще додати кудись (чи html чи css)
+ іконку хрестика(що закриває вікно)
+  до aside -->
+    <!--aside menu-->
+    <aside
+      class="page__menu menu"
+      id="menu"
+      >
+      <div class="container">
+        <div class="top-bar menu__top">
+          <a href="#" class="top-bar__logo"
+          >
+            <img src="/src/images/icons/MyBiKE_logo_black.png"
+              alt="My bike Logo"/>
+          </a>
+          <a href="#" class="icon icon--close">
+          </a>
+        </div>
+        <div class="menu__bottom">
+          <nav class="nav menu__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about-us" class="nav__link">ABOUT US</a>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link">COMPARE BIKES</a>
+              </li>
+              <li class="nav__item">
+                <a href="#details" class="nav__link">DETAILS</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contacts" class="nav__link">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+1 234 5555-55-55" class="menu__phone-number">
+             +1 234 5555-55-5
+          </a>
+          <a href="tel:+1 234 5555-55-55" class="menu__book-ride"
+          >BOOK A TEST RIDE</a>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main">
+      <!--About title-->
+      <div class="container">
+        <div class="main__content">
+          <section class="about">
+            <article class="about__section"> <!--для чого це ?-->
+              <h2 class="about__title section-title section-title--align--left">Move Free</h2>
+              <p class="about__text">Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.
+              </p>
+            </article>
+          </section>
+
+          <!--можливо треба буде переробити як картки з продукцією-->
+          <!-- може треба до всіх заголовків типу compare bikes
+            змінити клас на section-title-->
+          <!--compare(product section)-->
+          <section class="products" id="products">
+            <h2 class="section-title">Compare Bikes</h2>
+
+            <div class="products__container">
+              <!--не знаю чи треба мені цей контейнер products__container-->
+              <article class="products__product">
+                <img
+                  src="/src/images/product-photos/Products/Sporty-4.png"
+                  alt="Sporty-4"
+                  class="product__image"
+                >
+                <h3 class="product__title">Sporty 4</h3>
+                <p class="product__description">The iconic frame brought to a new performance height as a sporty, active ride.</p>
+                <p class="product__price">$ 2 590</p>
+              </article>
+              <article class="product">
+                <img
+                  src="/src/images/product-photos/Products/Ride-in-town-ST.png"
+                  alt="Ride-in-town-ST"
+                  class="product__image"
+                >
+                <h3 class="product__title">Ride in town ST</h3>
+                <p class="product__description">An open frame for an upright riding position as the most comfortable ride in town.</p>
+                <p class="product__price">$ 2 590</p>
+              </article>
+              <article class="product">
+                <img
+                  src="/src/images/product-photos/Products/Agile-ride-3.png"
+                  alt="Agile-ride-3"
+                  class="products product__image"
+                >
+                <h3 class="product__title">Agile ride 3</h3>
+                <p class="product__description">The lightweight frame that has earned its street tread as a sleek, agile ride.</p>
+                <p class="product__price">$ 2 090</p>
+              </article>
+            </div>
+          </section>
+          <!-- спочатку я стилізував хедер та секцію з продукцією,
+           а вже потім приступлю до цієї і решти -->
+          <!--Details-->
+          <section class="details" id="details">
+            <h2 class="section-title">The Details</h2>
+            <div class="details__wrapper">
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--wide">
+                    <img
+                      src="/src/images/product-photos/Details/Steering_wide.png"
+                      alt="Steering_wide"
+                      class="detail__photo"
+                      />
+                  </a>
+                  <a href="#" class="detail__link detail__link--square">
+                    <img
+                      src="/src/images/product-photos/Details/Steering_sqaure.png"
+                      alt="Steering_sqaure"
+                      class="detail__photo"
+                      />
+                  </a>
+
+                </div>
+                <h4 class="detail__title">Auto Unlock</h4>
+                <p class="detail__text">The app senses when you're nearby to unlock automatically. GPS tracking so you know where your bike is and can track it anytime.</p>
+              </article>
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--wide">
+                    <img
+                      src="/src/images/product-photos/Details/Bike_wide.png"
+                      alt="Bike_wide"
+                      class="detail__photo"
+                      />
+                  </a>
+                  <a href="#" class="detail__link detail__link--square">
+                    <img
+                      src="/src/images/product-photos/Details/Bike_square.png"
+                      alt="Bike_square"
+                      class="detail__photo"
+                      />
+                  </a>
+
+                </div>
+                <h4 class="detail__title">Range & Integrated lights</h4>
+                <p class="detail__text">The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
+              </article>
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--square">
+                    <img
+                      src="/src/images/product-photos/Details/Detail_square.png"
+                      alt="Detail_square"
+                      class="detail__photo"
+                      />
+                  </a>
+                  <a href="#" class="detail__link detail__link--wide">
+                    <img
+                      src="/src/images/product-photos/Details/Detail_wide.png"
+                      alt="Detail_wide"
+                      class="detail__photo"
+                      />
+                  </a>
+
+                </div>
+                <h4 class="detail__title">Hydraulic disc brakes & Lightweight</h4>
+                <p class="detail__text">Brakes with total stopping power the second you make contact. The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
+              </article>
+            </div>
+            <button
+              href="#explore"
+              data-qa="hover"
+              class="explore">Explore
+            </button>
+          </section>
+
+
+
+          <!--contact-->
+          <!--я трохи не правильно його стилізував,
+          треба стилізувати його версію для мобільного -->
+          <section
+            class="contacts"
+            id="contacts"
+          >
+            <h2 class="contacts__title section-title">Contact us</h2>
+            <div class="contacts__form">
+              <form
+                action="#"
+                method="post"
+                class="contacts__form"
+              >
+                <input
+                  type="text"
+                  class="contacts__form--name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  class="contacts__form--email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <textarea
+                  action="#"
+                  class="contacts__form--name--message"
+                  name="message"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </form>
+              <button
+                class="contacts__button"
+                type="submit"
+              >
+                Send
+              </button>
+            </div>
+            <div class="contacts__info">
+              <div class="contacts__info--item">
+                <p class="contacts__info--title">Phone</p>
+                <p class="contacts__item--text">+1 234 5555-55-55</p>
+              </div>
+              <div class="contacts__item">
+                <p class="contacts__item--title">Email</p>
+                <p class="contacts__item-text">hello@miami.com</p>
+              </div>
+              <div class="contacts__item">
+                <p class="contacts__item--title">Address</p>
+                <p class="contacts__item--text">
+                  400 first ave. suite 700 Minneapolis, MN 55401
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+      <img src="/src/images/product-photos/Footer_photo.png" alt="Bike_photos"
+        class="footer__image">
+    </footer>
+
+
   </body>
 </html>
+<!--додати всі необхідні класи до елементів, щоб правильно їх стилізувати-->

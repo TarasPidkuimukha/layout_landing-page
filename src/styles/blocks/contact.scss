@@ -1,19 +1,23 @@
 .contacts {
 
+
   @include pageGrid;
 
 
   &__form {
+    display: flex;
+    flex-direction: column;
     background-color: #F8F8FA;
     row-gap: 16px;
+    width: 278px;
 
 
 
     &--name {
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
-      width: 278px;
+    //  display: flex;
+    //  justify-content: space-between;
+     // align-items: start ;
+
       height: 48px;
       border-radius: 40px;
 
@@ -22,10 +26,10 @@
 
     &--email{
 
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
-      width: 278px;
+//      display: flex;
+ //     justify-content: space-between;
+    //  align-items: start ;
+     // width: 278px;
       height: 48px;
       border-radius: 40px;
 
@@ -33,10 +37,10 @@
 
     &--message{
 
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
-      width: 278px;
+    //  display: flex;
+    //  justify-content: space-between;
+    //  align-items: start ;
+    //  width: 278px;
       height: 148;
       border-radius: 16px;
 

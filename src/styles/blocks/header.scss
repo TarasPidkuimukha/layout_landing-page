@@ -1,29 +1,32 @@
 .header {
+  @include contentPaddingInline;
 
   background-image: url(/src/images/product-photos/Header_photo.png);
   background-size: cover;
   background-position: center;
 
-
-
-
   &__content {
     @include contentPaddingInline;
 
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 24px;
   }
 
   &__title {
     margin: 0;
+    width: 279px;
+    height: 36px;
     font-weight: 700;
     font-style: Bold;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: -1.5px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 

@@ -1,9 +1,9 @@
 .top-bar {
-  padding-block: 24px;
- 
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: 24px;
 
   @include contentPaddingInline;
 
@@ -14,10 +14,14 @@
   &__icons {
     display: flex;
     gap: 24px;
+    justify-content: space-between;
+    
   }
 
   &__logo {
-    display: flex;
+
+    display: block;
+    //justify-content: space-between;
   }
 }
 

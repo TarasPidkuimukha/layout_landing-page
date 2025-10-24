@@ -1,4 +1,6 @@
 .header {
+  //margin: 0;
+
   @include contentPaddingInline;
 
   background-image: url(/src/images/product-photos/Header_photo.png);
@@ -13,6 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
+
   }
 
   &__title {

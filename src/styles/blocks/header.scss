@@ -1,20 +1,17 @@
 .header {
-  //margin: 0;
-
-  @include contentPaddingInline;
 
   background-image: url(/src/images/product-photos/Header_photo.png);
   background-size: cover;
   background-position: center;
 
+
   &__content {
-    @include contentPaddingInline;
 
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+
 
   }
 

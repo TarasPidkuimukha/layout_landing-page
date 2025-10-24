@@ -1,5 +1,6 @@
 .main {
   background-color: #1D1D1D;
+  @include contentPaddingInline;
 
   &__content {
     display: grid;
@@ -16,11 +17,5 @@
       row-gap: 144px; // де на дизайні padding-block, а де row-gap
     }
   }
-
-  @include contentPaddingInline;
-
-
 }
-.container {
-  @include maxWidth;
-}
+

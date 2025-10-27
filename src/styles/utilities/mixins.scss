@@ -6,8 +6,8 @@
 }
 
 @mixin maxWidth {
-  max-width: 1020px;
-  
+  max-width: 1440px;
+
 }
 @mixin onDesktop {
   @media (min-width: $desktop-min-width) {

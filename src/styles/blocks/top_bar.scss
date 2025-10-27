@@ -3,12 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 24px;
+  padding: 24px 20px;
 
 
 
   @media onTablet {
-    padding-block: 36px;
+    padding: 73px 36px;
+  }
+
+  @media onDesktop {
+    padding: 120px 36px;
   }
 
   &__icons {
@@ -19,8 +23,7 @@
   }
 
   &__logo {
-
-    display: block;
+    //display: block;
     justify-content: space-between;
   }
 }

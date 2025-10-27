@@ -2,7 +2,10 @@
   @include pageGrid;
   //!додати загальний grid у mixins, а потім перенести його сюди//
 
-
+  &__section {
+    display: flex;
+    justify-content: space-between;
+  }
     &__title {
       line-height: 140%;
       margin: 0;
@@ -28,5 +31,3 @@
     }
   }
 }
-
-

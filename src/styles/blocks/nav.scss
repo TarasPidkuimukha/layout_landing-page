@@ -1,9 +1,12 @@
 .nav {
 
+  padding-left: 20px;
+
   &__link {
     color: inherit;
     text-decoration: none;
     font-size: 22px;
+    font-weight: 600;
     line-height: 22px;
     letter-spacing: 2px;
   }
@@ -15,9 +18,18 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+  }
+
+  &__bottom {
+    width: 400px;
+    height: 200px;
+
+
   }
 
   &:hover {
+    
     width: fit-content;
     border-bottom: 1px solid $main-border-color;
   }

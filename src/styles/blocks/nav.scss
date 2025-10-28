@@ -24,12 +24,12 @@
   &__bottom {
     width: 400px;
     height: 200px;
-
-
   }
 
+  
+
   &:hover {
-    
+
     width: fit-content;
     border-bottom: 1px solid $main-border-color;
   }

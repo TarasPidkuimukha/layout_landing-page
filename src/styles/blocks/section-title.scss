@@ -1,6 +1,8 @@
 .section-title {
+  height: 32px;
+  
   margin: 0;
-  margin-bottom: 48px;
+  //margin-bottom: 48px;
 
   font-weight: 500;
   font-size: 32px;
@@ -21,6 +23,7 @@
   //додати розмір шрифту для різних пристроїв через include//
 
   &--title--align--left {
+    margin: 0;
     text-align-last: left;
   }
 

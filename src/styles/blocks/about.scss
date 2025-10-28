@@ -1,12 +1,16 @@
 .about {
+  margin: 0;
   @include pageGrid;
   //!додати загальний grid у mixins, а потім перенести його сюди//
 
   &__section {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
   }
     &__title {
+      width: 152px;
+      grid-column: 1 / 6;
       line-height: 140%;
       margin: 0;
 
@@ -21,12 +25,14 @@
     }
 
    &__text {
+
+    grid-column: 6 / -1;
     grid-column: 1/-1;
-    @include onTablet {
+    //@include onTablet {
       grid-column: 4 / 7;
     }
 
-    @include onDesktop {
+    //@include onDesktop {
       grid-column: span 6;
     }
   }

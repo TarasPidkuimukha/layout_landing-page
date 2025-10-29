@@ -1,8 +1,12 @@
 .section-title {
-  height: 32px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //height: 32px;
+
   margin: 0;
-  //margin-bottom: 48px;
+  margin-bottom: 48px;
+
 
   font-weight: 500;
   font-size: 32px;
@@ -13,7 +17,7 @@
 
   @include onTablet {
     font-size: 40px;
-    margin-bottom: 64px;
+    //margin-bottom: 64px;
   }
 
   @include onDesktop {
@@ -24,6 +28,7 @@
 
   &--title--align--left {
     margin: 0;
+    margin-bottom: 0;
     text-align-last: left;
   }
 

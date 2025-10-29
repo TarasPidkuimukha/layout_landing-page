@@ -15,6 +15,10 @@
 }
 
 .detail {
+
+  display: grid;
+
+
   &__photos {
     @include pageGrid;
     margin-bottom: 16px;
@@ -54,14 +58,19 @@
 
 
   &__text {
+
+    display: grid;
     margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
+
   }
 
   &__title {
+
     margin: 0;
+    margin-bottom: 8px;
     font-weight: 700;
     font-size: 24px;
     line-height: 140%;
@@ -84,7 +93,7 @@
   font-size: 16px;
   text-decoration: none;
   align-items: center;
-  color: #fff;
+  color: #1D1D1D;
   text-align: center;
   place-content: center;
   box-sizing: border-box;

@@ -1,7 +1,9 @@
 @import '/src/styles/utilities/variables';
 @import '/src/styles/utilities/mixins';
 
+//@import '/src/styles/blocks/container.scss';
 
+@import '/src/styles/blocks/about.scss';
 
 
 @import '/src/styles/blocks/main';
@@ -10,5 +12,12 @@
 @import '/src/styles/blocks/top_bar';
 @import '/src/styles/blocks/menu';
 @import '/src/styles/blocks/nav';
+@import '/src/styles/blocks/product.scss';
 @import '/src/styles/blocks/details';
 @import '/src/styles/blocks/icons';
+@import '/src/styles/blocks/contact.scss';
+
+@import '/src/styles/blocks/section-title.scss';
+;
+@import '/src/styles/blocks/body.scss';
+@import '/src/styles/blocks/footer.scss';

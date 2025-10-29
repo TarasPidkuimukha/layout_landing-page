@@ -7,6 +7,9 @@
   scroll-behavior: smooth;
 
   &__body {
+    display: inline-block;
+
+    //width: 100vh;
     margin: 0;
   }
 

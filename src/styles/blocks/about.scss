@@ -1,20 +1,24 @@
 .about {
   margin: 0;
-  @include pageGrid;
+  //@include pageGrid;
   //!додати загальний grid у mixins, а потім перенести його сюди//
 
   &__section {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
 
-  }
+    @include pageGrid;
+
+    }
+
     &__title {
-      width: 152px;
+
       grid-column: 1 / 6;
-      line-height: 140%;
+      line-height: 100%;
       margin: 0;
 
-      grid-column: 1 / -1;
+      grid-column: span 2;
       @include onTablet {
         grid-column: 1 / 4;
       }
@@ -25,15 +29,18 @@
     }
 
    &__text {
+    margin: 0;
+    line-height: 140%;
 
     grid-column: 6 / -1;
     grid-column: 1/-1;
-    //@include onTablet {
+
+    @include onTablet {
       grid-column: 4 / 7;
     }
 
-    //@include onDesktop {
-      grid-column: span 6;
+    @include onDesktop {
+      grid-column: 6 / -1;
     }
   }
 }

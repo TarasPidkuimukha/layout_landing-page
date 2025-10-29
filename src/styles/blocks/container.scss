@@ -4,4 +4,8 @@
   @include maxWidth;
 
   @include pageGrid;
+
+  &__main {
+    margin-bottom: 132px;
+  }
 }

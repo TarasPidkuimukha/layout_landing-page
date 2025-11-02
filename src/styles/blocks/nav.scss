@@ -1,4 +1,6 @@
 .nav {
+  display: flex;
+  position: relative;
   margin-left: 20px;
 
   @include onTablet {
@@ -10,6 +12,8 @@
   }
 
   &__link {
+    display: flex;
+    position: relative;
     color: inherit;
     text-decoration: none;
     font-size: 22px;
@@ -17,11 +21,31 @@
     line-height: 22px;
     letter-spacing: 2px;
 
-    &:hover {
-    width: fit-content;
-    border-bottom: 1px solid $main-border-color;
-    transition: all;
+     &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+      height: 1px;
+      background-color: $main-border-color;
+      transition: width 0.6s ease-out;
     }
+    @keyframes underlineFromCenter {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    &:hover::after {
+      width: fit-content;
+      animation: underlineFromCenter 0.6s ease-out forwards;
+    }
+
+
   }
 
   &__list {

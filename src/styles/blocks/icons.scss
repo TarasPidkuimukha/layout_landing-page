@@ -11,10 +11,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
-       
-
-
+    display: flex;
+    position: relative;
+      @include onDesktop {
+        &:hover::before {
+          content: url(/src/images/icons/phone__number.png);
+          position: absolute;
+          opacity: 1;
+          right: 40px;
+        }
+      }
   }
 
   &--menu {

@@ -1,14 +1,14 @@
 
 @mixin onTablet {
-  @media (min-width: $table-min-with) {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     @content;
   }
 }
 
 @mixin maxWidth {
   max-width: 1440px;
-
 }
+
 @mixin onDesktop {
   @media (min-width: $desktop-min-width) {
     @content;
@@ -17,7 +17,6 @@
 
 @mixin contentPaddingInline() {
   padding-inline: 20px;
-
   @include onTablet {
     padding-inline: 72px;
   }
@@ -32,19 +31,15 @@
   --columns: 2;
   display: grid;
   column-gap: 20px;
-  grid-template-columns: repeat(var(--columns), 1fr); //це грід для телефону
+  grid-template-columns: repeat(var(--columns), 1fr);
 
   @include onTablet {
     --columns: 6;
     column-gap: 24px;
   }
+
   @include onDesktop {
     --columns: 12;
     column-gap: 24px;
   }
-}
-
-
-.contentPaddingInline {
-  @include contentPaddingInline;
 }

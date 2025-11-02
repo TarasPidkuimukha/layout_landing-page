@@ -2,12 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //height: 32px;
-
   margin: 0;
   margin-bottom: 48px;
-
-
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
@@ -16,15 +12,12 @@
   text-align: center;
 
   @include onTablet {
-    font-size: 40px;
-    //margin-bottom: 64px;
-  }
-
-  @include onDesktop {
     font-size: 48px;
   }
 
-  //додати розмір шрифту для різних пристроїв через include//
+  @include onDesktop {
+    font-size: 64px;
+  }
 
   &--title--align--left {
     margin: 0;

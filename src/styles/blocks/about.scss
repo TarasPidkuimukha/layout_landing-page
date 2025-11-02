@@ -1,46 +1,49 @@
 .about {
   margin: 0;
-  //@include pageGrid;
-  //!додати загальний grid у mixins, а потім перенести його сюди//
 
+  @include onDesktop {
+    margin-bottom: 144px;
+  }
   &__section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    margin-bottom: 92px;
 
     @include pageGrid;
 
     }
-
     &__title {
-
-      grid-column: 1 / 6;
+      font-weight: 500;
+      font-size: 32px;
       line-height: 100%;
+      letter-spacing: -1.5px;
+      grid-column: 1 / -1;
       margin: 0;
 
-      grid-column: span 2;
       @include onTablet {
+        font-size: 48px;
         grid-column: 1 / 4;
       }
-
       @include onDesktop {
+
+        font-size: 64px;
         grid-column: span 4;
       }
     }
-
    &__text {
+    font-weight: 500;
+    font-size: 23px;
     margin: 0;
     line-height: 140%;
-
-    grid-column: 6 / -1;
     grid-column: 1/-1;
 
     @include onTablet {
-      grid-column: 4 / 7;
+      grid-column: 4 / -1;
     }
 
     @include onDesktop {
-      grid-column: 6 / -1;
+      grid-column: 6 / 12;
     }
   }
 }

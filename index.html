@@ -15,6 +15,8 @@
       rel="stylesheet"
       href="/src/styles/main.scss"
     />
+
+    <link rel="icon" href="/src/images/icons/MyBike_favicon.png">
     <script
       src="scripts/main.js"
       defer
@@ -22,11 +24,10 @@
   </head>
   <body class="page__body">
 
-    <!--тут був class='container'-->
     <!--header-->
     <header class="header">
 
-      <div class="header__content"> <!--стилізація начинки хедера-->
+      <div class="header__content">
         <div class="top-bar">
           <a href="#" class="top-bar__logo">
             <img src="/src/images/icons/MyBiKE_logo_white.png" alt="MyBiKE logo">
@@ -44,16 +45,14 @@
 
     </header>
 
-    <!-- треба ще додати кудись (чи html чи css)
- іконку хрестика(що закриває вікно)
-  до aside -->
+
     <!--aside menu-->
     <aside
         class="page__menu menu"
         id="menu"
       >
       <div class="container__top-bar">
-        <div class="top-bar menu__top">
+        <div class="top-bar">
           <a href="#" class="top-bar__logo"
           >
             <img src="/src/images/icons/MyBiKE_logo_black.png"
@@ -62,32 +61,34 @@
           <a href="#" class="icon icon--close">
           </a>
         </div>
-        <div class="menu__bottom">
-          <nav class="nav menu__nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="#about-us" class="nav__link">ABOUT US</a>
-              </li>
-              <li class="nav__item">
-                <a href="#products" class="nav__link">COMPARE BIKES</a>
-              </li>
-              <li class="nav__item">
-                <a href="#details" class="nav__link">DETAILS</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contacts" class="nav__link">CONTACTS</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="nav__bottom">
-            <p class="menu__phone-number">+1 234 5555-55-55</p>
-            <p class="menu__book-ride">BOOK A TEST RIDE</p>
-          </div>
 
+        <nav class="nav menu__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">ABOUT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="#products" class="nav__link">COMPARE BIKES</a>
+            </li>
+            <li class="nav__item">
+              <a href="#details" class="nav__link">DETAILS</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">CONTACTS</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav__bottom">
+
+
+          <a href="tel:+1 234 555-55-55" class="menu__phone-number">+1 234 5555-55-5</a>
+          <a href="#" class="menu__book-ride">BOOK A TEST RIDE</a>
         </div>
+
+
       </div>
 
     </aside>
@@ -96,23 +97,20 @@
       <!--About title-->
 
       <div class="main__content">
-        <section class="about">
-          <article class="about__section"> <!--для чого це ?-->
-            <h2 class="about__title section-title section-title--align--left">Move Free</h2>
+        <section class="about" id="about">
+          <article class="about__section">
+            <h2 class="about__title  ">Move Free</h2>
             <p class="about__text">Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.
             </p>
           </article>
         </section>
 
-        <!--можливо треба буде переробити як картки з продукцією-->
-        <!-- може треба до всіх заголовків типу compare bikes
-          змінити клас на section-title-->
         <!--compare(product section)-->
         <section class="products" id="products">
           <h2 class="section-title">Compare Bikes</h2>
 
           <div class="products__container">
-            <!--не знаю чи треба мені цей контейнер products__container-->
+
             <article class="products__product">
               <img
                     src="/src/images/product-photos/Products/Sporty-4.png"
@@ -145,8 +143,7 @@
             </article>
           </div>
         </section>
-        <!-- спочатку я стилізував хедер та секцію з продукцією,
-            а вже потім приступлю до цієї і решти -->
+
         <!--Details-->
         <section class="details" id="details">
           <h2 class="section-title">The Details</h2>
@@ -189,6 +186,7 @@
                       />
                 </a>
               </div>
+
               <h4 class="detail__title">Range & Integrated lights</h4>
               <p class="detail__text">The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
             </article>
@@ -214,81 +212,83 @@
               <p class="detail__text">Brakes with total stopping power the second you make contact. The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
             </article>
           </div>
-          <button
+          <div class="details--button">
+            <button
                 href="#explore"
                 data-qa="hover"
                 class="explore">Explore
-          </button>
+            </button>
+          </div>
+
         </section>
 
-
-
         <!--contact-->
-        <!--я трохи не правильно його стилізував,
-          треба стилізувати його версію для мобільного -->
         <section
               class="contact"
               id="contacts"
             >
           <h2 class= "section-title">Contact us</h2>
           <div class="contacts">
-            <div class="contacts__form">
-              <form
+
+            <form
                   action="#"
                   method="post"
                   class="contacts__form"
+                  onsubmit="this.reset();
+                  return false;"
                 >
-                <input
+              <input
                     type="text"
                     class="contacts__form--name"
                     name="name"
                     placeholder="Name"
                     required
                   />
-                <input
+              <input
                     type="email"
                     class="contacts__form--email"
                     name="email"
                     placeholder="Email"
                     required
                   />
-                <textarea
+              <textarea
                     action="#"
                     class="contacts__form--message"
                     name="message"
                     placeholder="Message"
                     required
                   ></textarea>
-              </form>
+
               <button
                   class="contacts__button"
                   type="submit"
                   >
                 Send
               </button>
-            </div>
-          </div>
+            </form>
 
-          <div class="contacts__info">
-            <div class="contacts__info--item">
-              <p class="contacts__info--title">Phone</p>
-              <p class="contacts__item--text">+1 234 5555-55-55</p>
+            <div class="contacts__info">
+              <div class="contacts__info--item">
+                <p class="contacts__info--title">Phone</p>
+                <a href="tel:+1 234 555-55-55" class="contacts__info--text">+1 234 5555-55-55</a>
+              </div>
+              <div class="contacts__info">
+                <p class="contacts__info--title">Email</p>
+                <a href="hello@miami.com" class="contacts__info--text">hello@miami.com</a>
+              </div>
+              <div class="contacts__info">
+                <p class="contacts__info--title">Address</p>
+                <a href="https://www.google.com/maps/place/First+Avenue/@44.9785353,-93.2785781,17z/data=!3m1!4b1!4m6!3m5!1s0x52b332917cb8a83f:0xadb920377f253346!8m2!3d44.9785315!4d-93.2759978!16zL20vMDRycXl5?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+                  class="contacts__info--text"
+                  target="_blank">400 first ave. <br> suite 700 <br> Minneapolis, MN 55401</a>
+
+              </div>
             </div>
-            <div class="contacts__item">
-              <p class="contacts__item--title">Email</p>
-              <p class="contacts__item-text">hello@miami.com</p>
-            </div>
-            <div class="contacts__item">
-              <p class="contacts__item--title">Address</p>
-              <p class="contacts__item--text">
-                400 first ave. suite 700 Minneapolis, MN 55401
-              </p>
-            </div>
+
+
           </div>
         </section>
       </div>
-
-
     </main>
 
     <!--footer-->
@@ -296,10 +296,5 @@
       <img src="/src/images/product-photos/Footer_photo.png" alt="Bike_photos"
        class="footer__image">
     </footer>
-
-
-
-
   </body>
 </html>
-<!--додати всі необхідні класи до елементів, щоб правильно їх стилізувати-->

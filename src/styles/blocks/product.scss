@@ -1,17 +1,14 @@
 .products {
 
   &__container {
-
-
     @include pageGrid;
     row-gap: 48px;
+
     justify-content: center;
     align-items: center;
-    //grid-column: 1/-1;
 
     @include onDesktop {
-    row-gap: 56px;
-    //grid-column: 24px;
+      row-gap: 56px;
     }
   }
 
@@ -19,65 +16,63 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 0 24px;
-
-    width: 280px;
-    height: 418px;
     position: relative;
-
-   grid-column: 1/-1;
+    grid-column: 1/-1;
 
     @include onTablet {
-      grid-column: span 4;
+      grid-column: 2/ 6;
+
+      &:hover {
+        transform: scale(1.15);
+        transform-origin: center;
+        transition: transform 500ms ease-in-out;
+      }
     }
 
     @include onDesktop {
       grid-column: span 4;
+
+      &:hover {
+        transform: scale(1.1);
+        transform-origin: center;
+        transition: transform 500ms ease-in-out;
       }
     }
+  }
 
   .product__image {
-      //display: block;
       width: 100%;
     }
 
-    //чи треба стилізувати те що нижче ?
   .product__title {
       display: inline-block;
       margin: 0;
       margin-bottom: 8px;
-      //width: 324px;
-      //height: 34px;
-
-
-
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      line-height: 140%;
     }
 
   .product__description {
     margin: 0;
     display: inline-block;
-    //width: 392px;
-    //height: 44px;
-
-
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
 
     }
 
   .product__price {
-      margin: 0;
+      margin-top: 16px;
       display: flex;
       justify-self: start;
       align-items: center;
-      width: 392px;
       height: 34px;
-
-
-
-    }
-
-
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      line-height: 140%;
+  }
 
 }
-
-
-

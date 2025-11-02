@@ -1,11 +1,12 @@
 .container {
   margin: 0 auto;
+
   @include contentPaddingInline;
   @include maxWidth;
-
   @include pageGrid;
 
   &__main {
     margin-bottom: 132px;
   }
 }
+

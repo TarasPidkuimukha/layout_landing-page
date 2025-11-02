@@ -1,11 +1,10 @@
 .footer {
-
-  //@include contentPaddingInline;
-  //box-sizing: border-box;
+  position: sticky;
 
   &__image{
     display: block;
     width: 100%;
     box-sizing: border-box;
+    z-index: -1
   }
 }

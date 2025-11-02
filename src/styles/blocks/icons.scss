@@ -1,41 +1,35 @@
 .icon {
-  display: block;
   width: 24px;
   height: 24px;
   background-image: url(/src/images/icons/Icon-Burger-menu.png);
-
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-
-
-
-  @media onTablet{
-    height: 32px;
-    width: 32px;
-  }
 
   &--phone {
     background-image: url(/src/images/icons/phone_icon.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+
+    
+
   }
 
   &--menu {
-
     background-image: url(/src/images/icons/Icon-Burger-menu.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    &:hover {
+      background-image: url(/src/images/icons/Icon-Burger-menu-hover.png);
+    }
 
   }
-
   &--close {
     background-image: url(/src/images/icons/closing_icon.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
-
 }

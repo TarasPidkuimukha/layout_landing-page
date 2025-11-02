@@ -1,14 +1,26 @@
 .details {
+  margin-top: 92px;
+
+  @include onTablet {
+    margin-top: 120px;
+  }
+
+  @include onDesktop {
+    margin-top: 144px;
+  }
+
   &__wrapper{
     display: grid;
     row-gap: 40px;
-    margin-bottom: 120px;
 
     @include onTablet {
       row-gap: 48px;
+
     }
+
     @include onDesktop {
       row-gap: 48px;
+
     }
 }
 
@@ -16,11 +28,9 @@
 
 .detail {
 
-  display: grid;
-
-
   &__photos {
     @include pageGrid;
+
     margin-bottom: 16px;
   }
 
@@ -29,13 +39,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
 
   &__link {
-
     position: relative;
-
     &--wide {
+
       @include onTablet {
         grid-column: span 4;
     }
@@ -45,7 +55,7 @@
     }
     &--square {
         height: 0;
-        padding-bottom: 100%; //щоб була квадратна картинка
+        padding-bottom: 100%;
       @include onTablet {
         grid-column: span 2;
     }
@@ -53,22 +63,17 @@
         grid-column: span 4;
     }
   }
-
-  }
-
+}
 
   &__text {
-
-    display: grid;
     margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-
+    grid-column: 1 / -1;
   }
 
   &__title {
-
     margin: 0;
     margin-bottom: 8px;
     font-weight: 700;
@@ -77,34 +82,48 @@
   }
 
 }
-
+.details--button {
+  display: grid;
+  @include pageGrid;
+}
 .explore {
-
-
-  //можливо треба буде додати падінги до всього сайту, щоб кнопка не була за велика
+  display: grid;
+  padding: 0;
   flex-shrink: 0;
-  display: flex;
-  width: 278px;
+
+  width: 100%;
   height: 56px;
-  background-color: #FFFFFF;
+  margin-inline: auto;
+  background-color: #FFF;
   border-radius: 40px;
   font-weight: 700;
-  line-height: 27px;
   font-size: 16px;
-  text-decoration: none;
   align-items: center;
   color: #1D1D1D;
   text-align: center;
-  place-content: center;
   box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  border: none;
+  grid-column: 1 / -1;
+
 
   @include onTablet {
-    width: 392px;
+    grid-column: 2 / 6;
+    margin-top: 48px;
+    margin-bottom: 120px;
   }
+
   @include onDesktop {
-    width: 324px;
+    grid-column: 5 / 9;
+    margin-top: 48px;
+    margin-bottom: 180px;
   }
-  //додати стани :hover та :active, також перевірити як додати відступ внизу
-  // може вгорі, до заголовку contact
+
+    &:hover {
+      box-shadow: 1px 4px 16px #E8E8F066;
+    }
+    &:focus {
+      box-shadow: 1px 4px 16px #E8E8F0A3;
+    }
 }
-//додати щоб картики збільшувались коли наводиш

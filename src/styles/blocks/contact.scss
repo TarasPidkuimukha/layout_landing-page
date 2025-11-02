@@ -1,120 +1,142 @@
 .contacts {
-
-
   @include pageGrid;
-
-
-
 
   &__form {
     display: grid;
-    //justify-content: center;
-    //align-items: center;
-    //grid-column: 1/-1;
+    grid-column: 1/-1;
     row-gap: 16px;
+    width: 100%;
 
     @include onTablet {
-      grid-column: span 1/ 5;
+      grid-column: 1/ 4;
     }
 
-
-
-
+    @include onDesktop {
+      grid-column: 1/ 6;
+    }
 
     &--name {
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
-      width: 280px;
       height: 48px;
+      border: none;
       border-radius: 16px;
+      resize: none;
+      padding-left: 16px;
+      outline: none;
 
-      @include onTablet {
-        width: 392px;
-      }
-      @include onDesktop {
-        width: 411px;
-      }
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #7E7E83;
 
+        &:hover {
+          color: #292929;
+
+        }
+      }
     }
 
     &--email{
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
-      width: 280px;
       height: 48px;
       border-radius: 16px;
+      border: none;
+      resize: none;
+      padding-left: 16px;
+      outline: none;
 
-      @include onTablet {
-        width: 392px;
-      }
-      @include onDesktop {
-        width: 411px;
-      }
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #7E7E83;
 
+         &:hover {
+          color: #292929;
+        }
+      }
     }
 
     &--message{
-
-      display: flex;
-      justify-content: space-between;
-      align-items: start ;
       height: 148px;
-      width: 280px;
       border-radius: 16px;
+      border: none;
+      resize: none;
+      padding-top: 14px;
+      padding-left: 16px;
+      outline: none;
 
-      @include onTablet {
-        width: 392px;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #7E7E83;
+
+        &:hover {
+          color: #292929;
+        }
       }
-      @include onDesktop {
-        width: 411px;
-      }
-
-
     }
 
   }
 
-  &__button{
-  flex-shrink: 0;
-  display: flex;
-  width: 280px;
-  height: 56px;
-  background-color: #FFFFFF;
-  border-radius: 40px;
-  font-weight: 700;
-  line-height: 27px;
-  font-size: 16px;
-  text-decoration: none;
-  align-items: center;
-  color: #1D1D1D;
-  text-align: center;
-  place-content: center;
-  box-sizing: border-box;
-  margin-top: 32px;
-  margin-bottom: 48px;
+    &__button{
+      flex-shrink: 0;
+      display: flex;
+      width: 100%;
+      height: 56px;
+      background-color: #FFF;
+      border-radius: 40px;
+      font-weight: 700;
+      line-height: 27px;
+      font-size: 16px;
+      text-decoration: none;
+      align-items: center;
+      color: #1D1D1D;
+      text-align: center;
+      place-content: center;
+      box-sizing: border-box;
+      border: none;
+      margin-bottom: 48px;
+      margin-top: 32px;
 
-
-  @include onTablet {
-    width: 392px;
+      &:hover {
+        box-shadow: 1px 4px 16px #E8E8F066;
+      }
+      &:focus {
+        box-shadow: 1px 4px 16px #E8E8F0A3;
+      }
   }
-  @include onDesktop {
-    width: 411px;
-  }
 
-  }
-
-
+input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color:#292929;
+}
   &__info {
-    &--title {
 
+    grid-column: 1/-1;
+
+      @include onTablet {
+        grid-column: 4/ -1;
+       }
+      @include onDesktop {
+        grid-column: 8/ 10;
+      }
+
+    &--title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #FFF;
     }
 
     &--text {
-
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: #FFF;
+      text-decoration: none;
+    }
   }
-  }
-
-
 }

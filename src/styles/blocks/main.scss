@@ -1,7 +1,15 @@
 .main {
-  background-color: #1D1D1D;
+  display: flex;
+  justify-content: center;
+  background-color: $main-color;
 
   @include contentPaddingInline;
+
+  &__content {
+
+    max-width: 1020px;
+    margin-block: auto;
+  }
 
   &__content {
     padding-block: 92px;

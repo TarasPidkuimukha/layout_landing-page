@@ -40,6 +40,12 @@
     height: 100%;
     object-fit: cover;
 
+    &:hover {
+        transform: scale(1.1);
+        transform-origin: center;
+        transition: transform 500ms ease-in-out;
+        z-index: 1;
+      }
   }
 
   &__link {
@@ -122,8 +128,10 @@
 
     &:hover {
       box-shadow: 1px 4px 16px #E8E8F066;
+      cursor: pointer;
     }
     &:focus {
       box-shadow: 1px 4px 16px #E8E8F0A3;
+      cursor: pointer;
     }
 }

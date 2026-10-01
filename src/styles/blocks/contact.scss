@@ -101,9 +101,11 @@
 
       &:hover {
         box-shadow: 1px 4px 16px #E8E8F066;
+        cursor: pointer;
       }
       &:focus {
         box-shadow: 1px 4px 16px #E8E8F0A3;
+        cursor: pointer;
       }
   }
 
@@ -137,6 +139,7 @@ input {
       line-height: 140%;
       color: #FFF;
       text-decoration: none;
+      white-space: nowrap;
     }
   }
 }

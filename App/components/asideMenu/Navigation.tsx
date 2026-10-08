@@ -1,3 +1,6 @@
+import '../../../src/styles/blocks/nav.scss';
+import '../../../src/styles/blocks/menu.scss';
+
 export const Navigation = () => {
   return (
     <nav className="nav menu__nav">
@@ -30,4 +33,4 @@ export const Navigation = () => {
       </ul>
     </nav>
   );
-}
+};

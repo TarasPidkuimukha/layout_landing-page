@@ -1,6 +1,9 @@
 import { ContactInfo } from './ConactInfo';
 import { ContactForm } from './ContactForm';
 
+import '../../../../src/styles/blocks/contact.scss';
+import '../../../../src/styles/blocks/section-title.scss';
+
 export const Contacts = () => {
   return (
     <section className="contact" id="contacts">

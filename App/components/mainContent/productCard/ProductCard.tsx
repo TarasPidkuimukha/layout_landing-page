@@ -1,3 +1,5 @@
+import '../../../../src/styles/blocks/products.scss';
+
 export const ProductCard = () => {
   return (
     <section className="products" id="products">

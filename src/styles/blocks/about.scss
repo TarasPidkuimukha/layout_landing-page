@@ -1,7 +1,10 @@
+@use '../utilities/mixins.scss' as *;
+@use '../utilities/variables.scss' as *;
+
 .about {
   margin: 0;
 
-  @include onDesktop {
+  @include on-desktop {
     margin-bottom: 144px;
   }
   &__section {
@@ -10,39 +13,38 @@
     gap: 32px;
     margin-bottom: 92px;
 
-    @include pageGrid;
+    @include page-grid;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    grid-column: 1 / -1;
+    margin: 0;
 
+    @include on-tablet {
+      font-size: 48px;
+      grid-column: 1 / 4;
     }
-    &__title {
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 100%;
-      letter-spacing: -1.5px;
-      grid-column: 1 / -1;
-      margin: 0;
 
-      @include onTablet {
-        font-size: 48px;
-        grid-column: 1 / 4;
-      }
-      @include onDesktop {
-
-        font-size: 64px;
-        grid-column: span 4;
-      }
+    @include on-desktop {
+      font-size: 64px;
+      grid-column: span 4;
     }
-   &__text {
+  }
+  &__text {
     font-weight: 500;
     font-size: 23px;
     margin: 0;
     line-height: 140%;
     grid-column: 1/-1;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 4 / -1;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: 6 / 12;
     }
   }

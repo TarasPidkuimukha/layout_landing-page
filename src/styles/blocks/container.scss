@@ -1,12 +1,14 @@
+@use '../utilities/mixins.scss' as *;
+@use '../utilities/variables.scss' as *;
+
 .container {
   margin: 0 auto;
 
-  @include contentPaddingInline;
-  @include maxWidth;
-  @include pageGrid;
+  @include content-padding-inline;
+  @include max-width;
+  @include page-grid;
 
   &__main {
     margin-bottom: 132px;
   }
 }
-

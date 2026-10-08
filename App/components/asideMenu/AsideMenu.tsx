@@ -1,5 +1,12 @@
 import { Navigation } from './navigation';
 
+import '../../../src/styles/blocks/page.scss';
+import '../../../src/styles/blocks/menu.scss';
+import '../../../src/styles/blocks/container.scss';
+import '../../../src/styles/blocks/top_bar.scss';
+import '../../../src/styles/blocks/icons.scss';
+import '../../../src/styles/blocks/nav.scss';
+
 export const AsideMenu = () => {
   return (
     <aside className="page__menu menu" id="menu">

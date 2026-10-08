@@ -1,3 +1,6 @@
+import '../../../../src/styles/blocks/details.scss';
+import '../../../../src/styles/blocks/section-title.scss';
+
 export const Details = () => {
   return (
     <section className="details" id="details">
@@ -78,7 +81,11 @@ export const Details = () => {
         </article>
       </div>
       <div className="details--button">
-        <button ref="#explore" data-qa="hover" class="explore">
+        <button
+          // ref="#explore"
+          data-qa="hover"
+          className="explore"
+        >
           Explore
         </button>
       </div>

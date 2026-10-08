@@ -1,11 +1,13 @@
+import '../../../../src/styles/blocks/contact.scss';
+
 export const ContactForm = () => {
   return (
     <form
       action="#"
       method="post"
       className="contacts__form"
-      onSubmit="this.reset();
-                  return false;"
+      // onSubmit="this.reset();
+      //             return false;"
     >
       <input
         type="text"
@@ -22,8 +24,8 @@ export const ContactForm = () => {
         required
       />
       <textarea
-        action="#"
-        class="contacts__form--message"
+        // action="#"
+        className="contacts__form--message"
         name="message"
         placeholder="Message"
         required

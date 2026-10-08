@@ -1,3 +1,5 @@
+import '../../../src/styles/blocks/footer.scss';
+
 export const Footer = () => {
   return (
     <footer className="footer">

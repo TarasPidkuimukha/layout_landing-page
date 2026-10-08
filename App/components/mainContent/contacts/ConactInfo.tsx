@@ -1,3 +1,5 @@
+import '../../../../src/styles/blocks/contact.scss'
+
 export const ContactInfo = () => {
   return (
     <div className="contacts__info">

@@ -1,3 +1,6 @@
+@use '../utilities/mixins.scss' as *;
+@use '../utilities/variables.scss' as *;
+
 .section-title {
   display: flex;
   justify-content: center;
@@ -11,11 +14,11 @@
   letter-spacing: -1.5;
   text-align: center;
 
-  @include onTablet {
+  @include on-tablet {
     font-size: 48px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     font-size: 64px;
   }
 
@@ -24,5 +27,4 @@
     margin-bottom: 0;
     text-align-last: left;
   }
-
 }

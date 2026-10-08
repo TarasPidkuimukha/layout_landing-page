@@ -1,3 +1,8 @@
+import { AsideMenu } from '../asideMenu/AsideMenu';
+import '../../../src/styles/blocks/header.scss';
+import '../../../src/styles/blocks/top_bar.scss';
+import '../../../src/styles/blocks/icons.scss';
+
 export const Header = () => {
   return (
     <header className="header">
@@ -15,6 +20,7 @@ export const Header = () => {
               className="top-bar__icons icon icon--phone"
             ></a>
             <a href="#menu" className="top-bar__icons icon icon--menu"></a>
+            <AsideMenu />
           </div>
         </div>
         <div className="header__bottom">

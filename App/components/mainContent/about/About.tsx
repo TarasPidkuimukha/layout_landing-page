@@ -1,3 +1,5 @@
+import '../../../../src/styles/blocks/about.scss';
+
 export const About = () => {
   return (
     <section className="about" id="about">
@@ -10,4 +12,4 @@ export const About = () => {
       </article>
     </section>
   );
-}
+};
